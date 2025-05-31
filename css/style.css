@@ -311,5 +311,23 @@ body::before {
     height: 100%;
     opacity: 0.5;
     z-index: -1;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 30% 70%, rgba(249, 161, 188, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 50% 40%, rgba(255, 62, 120, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 70% 80%, rgba(255, 62, 120, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 10%, rgba(249, 161, 188, 0.1) 0%, transparent 25%);
+    animation: backgroundFloat 15s infinite alternate ease-in-out;
+}
 
+@keyframes backgroundFloat {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 10% 5%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
