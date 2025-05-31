@@ -1,0 +1,36 @@
+/* Additional styling to ensure notes are clickable */
+.note, .note-content, .note-wrapper, .card-container {
+    cursor: pointer !important;
+}
+
+.note.active {
+    pointer-events: auto !important;
+    z-index: 1000 !important;
+}
+
+.note-content h2, .note-content p {
+    pointer-events: auto !important;
+}
+
+/* Make sure the heart button is visible on mobile */
+@media (max-width: 768px) {
+    #nextButton {
+        opacity: 0.6 !important;
+        padding: 15px !important;
+        font-size: 20px !important;
+    }
+}
+
+/* Add animation to show this is clickable */
+.note.active {
+    animation: pulse-clickable 2s infinite alternate;
+}
+
+@keyframes pulse-clickable {
+    0% {
+        box-shadow: 0 15px 35px rgba(255, 62, 120, 0.25), 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0 20px 40px rgba(255, 62, 120, 0.4), 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
